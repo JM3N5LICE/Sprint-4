@@ -36,19 +36,19 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     conn, addr = s.accept()
     with conn:
         print(f"Connected by {addr}")
+        # while True:
+        #     # client, addr = s.accept()
         while True:
-            # client, addr = s.accept()
-            while True:
-                data = conn.recv(1024)
-                try:
-                    value = my_dictionary.get(data.decode('utf-8'))
-                    if not data:
-                        break
-                    conn.sendall(str.encode(value))
-                except:
-                    if not data:
-                        break
-                    conn.sendall(b"Invalid name")
+            data = conn.recv(1024)
+            try:
+                value = my_dictionary.get(data.decode('utf-8'))
+                if not data:
+                    break
+                conn.sendall(str.encode(value))
+            except:
+                if not data:
+                    break
+                conn.sendall(b"Invalid name")
 
 
 # Run server shell command: python Echo_server.py

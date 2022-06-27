@@ -1,39 +1,30 @@
-# TCP-Network-Server
+
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description the networking program that you wrote. Describe how to use your software.  If you did Client/Server, then you will need to describe how to start both.}
+This project may seem simple but i did this to gain a basic understanding of how networks work. 
 
-{Describe your purpose for writing this software.}
+In this TCP echo network I wanted to make a simple project that connects on a network where the client sends a key word and if it is in the server's dictionary it will return the value associated with the key over the network connection. 
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running (you will need to show two pieces of software running and communicating with each other) and a walkthrough of the code.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](http://youtu.be/h29I3OBxHSU?hd=1)
 
 # Network Communication
 
-{Describe the architecture that you used (client/server or peer-to-peer)}
 
-{Identify if you are using TCP or UDP and what port numbers are used.}
-
-{Identify the format of messages being sent between the client and server or the messages sent between two peers.}
+I used a client to server connection. It is a TCP connection using the port number 65432 and the IP address "127.0.0.1".
+The formatof the messages being sent are strings being encoded to packets and then being coded back into strings.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
-
+This project is written completely in Python in the VSCode app using the socket library.
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Socket Programming Python Tutorial](https://realpython.com/python-sockets/)
+* [Python Socket Server Library](https://docs.python.org/3/library/socketserver.html)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Server continues to listen after client disconnects.
+* A GUI for the client side
+* Client can add and modify dictionary on server side from client.
